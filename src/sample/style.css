@@ -7,6 +7,30 @@
     -fx-background-radius: 5em;
 }
 
+.cup_on_screen_latte {
+    -fx-background-image: url('images/Caffe-latte.png');
+    -fx-border-color: transparent;
+        -fx-border-width: 0;
+        -fx-background-radius: 0;
+        -fx-background-color: transparent;
+        -fx-background-size: 100%;
+        -fx-background-position: center;
+        -fx-background-repeat: no-repeat;
+        -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,1) , 3, 0.0 , 0 , 1 );
+}
+
+.cup_on_screen_espresso {
+    -fx-background-image: url('images/espresso.png');
+    -fx-border-color: transparent;
+        -fx-border-width: 0;
+        -fx-background-radius: 0;
+        -fx-background-color: transparent;
+        -fx-background-size: 100%;
+        -fx-background-position: center;
+        -fx-background-repeat: no-repeat;
+        -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,1) , 3, 0.0 , 0 , 1 );
+}
+
 .cup_standing {
     -fx-background-image: url('images/cup_standing.png');
     -fx-border-color: transparent;
@@ -30,6 +54,12 @@
     -fx-background-color: red;
 }
 
+.screen {
+    -fx-background-image: url('images/ekran.png');
+    -fx-background-size: 100%;
+}
+
 .background {
     -fx-background-image: url('images/background.png');
+
 }
