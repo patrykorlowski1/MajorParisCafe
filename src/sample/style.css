@@ -1,4 +1,5 @@
 .button{
+    -fx-background-image: url('images/Kubek.png');
     -fx-background-size: 100%;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
