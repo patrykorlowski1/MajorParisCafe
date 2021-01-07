@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.application.Platform;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,6 +11,9 @@ import javafx.event.ActionEvent;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 
 import java.io.File;
 import java.net.URL;
@@ -17,9 +21,14 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
-    Image cafe1 = new Image(getClass().getResourceAsStream("images/kawa1.png"));
-    Image cafe2 = new Image(getClass().getResourceAsStream("images/kawa2.png"));
-    Image cafe3 = new Image(getClass().getResourceAsStream("images/kawa3.png"));
+    @FXML
+    public ToggleButton late;
+
+    @FXML
+    public ToggleButton espresso;
+
+    @FXML
+    public Button start;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -45,37 +54,63 @@ public class Controller implements Initializable {
 
     @FXML
     public void startCafeHandler(ActionEvent event) {
-        cafe.setStyle("-fx-background-image: url('images/kawa1.png');");
-        cafe.setStyle("-fx-opacity: 1;");
+        if(late.isSelected() || espresso.isSelected()){
+            cafe.setStyle("-fx-background-image: url('images/kawa1.png');");
+            cafe.setStyle("-fx-opacity: 1;");
 
-        new Thread(() ->
-        {
-            try
+            if(late.isSelected()) start.setText("Caffe latte");
+            if(espresso.isSelected()) start.setText("Espresso");
+
+            /*String path = "images/cafe_audio.mp3";
+            Media cafeAudio = new Media("file:///images/cafe_audio.mp3");
+            MediaPlayer cafeAudioPlayer = new MediaPlayer(cafeAudio);
+
+
+            new Thread(() ->
             {
-                for(int i=0, n=1; i<100; i++)
+                try
                 {
-                    n++;
-                    if(n>3) n=1;
-                    //tu ma sie przelaczac obrazek
-                    //Thread.sleep(1000);
-                    //if(n==1) cafe.setStyle("-fx-background-image: url('images/kawa1.png');");
-                    //else if(n==2) cafe.setStyle("-fx-background-image: url('images/kawa2.png');");
-                    //else if(n==3) cafe.setStyle("-fx-background-image: url('images/kawa3.png');");
-                    //Thread.sleep(5000);
+                    while(true)
+                    {
+                        cafeAudioPlayer.play();
+                    }
                 }
-                Thread.sleep(5000);
-                cafe.setStyle("-fx-opacity: 0;");
-                Thread.currentThread().interrupt();
-            }
-            catch (Exception e)
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }).start();*/
+            new Thread(() ->
             {
-                e.printStackTrace();
-            }
-        }).start();
-        //for(int i=0, n=1; i<1000000000; i++, n++){
-            //if(n>3) n=1;
-            //cafe.setStyle("-fx-background-image: url('images/kawa"+ n +".png');");
-        //}
+                try
+                {
+                    for(int i=0, n=1; i<100; i++)
+                    {
+                        n++;
+                        if(n>3) n=1;
+                        //tu ma sie przelaczac obrazek
+                        //Thread.sleep(1000);
+                        //if(n==1) cafe.setStyle("-fx-background-image: url('images/kawa1.png');");
+                        //else if(n==2) cafe.setStyle("-fx-background-image: url('images/kawa2.png');");
+                        //else if(n==3) cafe.setStyle("-fx-background-image: url('images/kawa3.png');");
+                        //Thread.sleep(5000);
+                    }
+                    Thread.sleep(5000);
+                    cafe.setStyle("-fx-opacity: 0;");
+                    toggleButtons();
+                    Platform.runLater(()->{
+                        start.setText("START");
+                    });
+                    Thread.currentThread().interrupt();
+
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }).start();
+        }
+
 
     }
 
@@ -87,5 +122,11 @@ public class Controller implements Initializable {
     @FXML
     public void takeSugar(ActionEvent event){
         ((Button)event.getSource()).setStyle("-fx-opacity: 0;");
+    }
+
+    public void toggleButtons() {
+        espresso.setSelected(false);
+        late.setSelected(false);
+
     }
 }

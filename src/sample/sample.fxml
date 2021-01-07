@@ -17,12 +17,12 @@
             <Button fx:id="cupToTake1" layoutX="56.0" layoutY="303.0" mnemonicParsing="false" onAction="#takeCupFromHandler" prefHeight="67.0" prefWidth="66.0" styleClass="cup_to_take" />
             <Pane layoutX="183.0" layoutY="275.0" prefHeight="167.0" prefWidth="233.0" styleClass="screen" stylesheets="@style.css">
                <children>
-                  <ToggleButton layoutX="12.0" layoutY="30.0" mnemonicParsing="false" prefHeight="114.0" prefWidth="108.0" styleClass="cup_on_screen_latte" />
-                  <ToggleButton layoutX="121.0" layoutY="30.0" mnemonicParsing="false" prefHeight="114.0" prefWidth="102.0" styleClass="cup_on_screen_espresso" />
-                  <Button layoutX="101.0" layoutY="141.0" mnemonicParsing="false" onAction="#startCafeHandler" text="START" />
+                  <ToggleButton fx:id="late" layoutX="12.0" layoutY="30.0" mnemonicParsing="false" prefHeight="114.0" prefWidth="108.0" styleClass="cup_on_screen_latte" />
+                  <ToggleButton fx:id="espresso" layoutX="121.0" layoutY="30.0" mnemonicParsing="false" prefHeight="114.0" prefWidth="102.0" styleClass="cup_on_screen_espresso" />
+                  <Button fx:id="start" layoutX="66.0" layoutY="139.0" mnemonicParsing="false" onAction="#startCafeHandler" prefHeight="25.0" prefWidth="102.0" styleClass="start" text="START" />
                </children>
             </Pane>
-            <Pane fx:id="cafe" layoutX="264.0" layoutY="503.0" pickOnBounds="true" prefHeight="114.0" prefWidth="88.0" styleClass="cafe" />
+            <Pane fx:id="cafe" layoutX="264.0" layoutY="491.0" pickOnBounds="true" prefHeight="145.0" prefWidth="95.0" styleClass="cafe" />
             <Button fx:id="takenCup" layoutX="252.0" layoutY="521.0" mnemonicParsing="false" onAction="#pickUpOrder" prefHeight="114.0" prefWidth="95.0" styleClass="cup_standing" />
             <Button fx:id="sugar6" layoutX="460.0" layoutY="594.0" mnemonicParsing="false" onAction="#takeSugar" prefHeight="34.0" prefWidth="88.0" styleClass="sugar" />
             <Button fx:id="sugar5" layoutX="460.0" layoutY="560.0" mnemonicParsing="false" onAction="#takeSugar" prefHeight="34.0" prefWidth="88.0" styleClass="sugar" />

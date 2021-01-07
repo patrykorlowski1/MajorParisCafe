@@ -80,16 +80,29 @@
 
 }
 
+.start {
+    -fx-background-image: url('images/przycisk.png');
+    -fx-text-inner-color: white;
+    -fx-background-size: 100%;
+    -fx-background-color: transparent;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,1) , 3, 0.0 , 0 , 1 );
+    -fx-background-radius: 5em;
+    -fx-text-fill: white;
+
+}
+
 .cafe{
     -fx-background-image: url('images/kawa1.png');
     -fx-border-color: transparent;
-        -fx-border-width: 0;
-        -fx-background-color: transparent;
-        -fx-background-size: 100%;
-        -fx-background-position: center;
-        -fx-background-repeat: no-repeat;
-        -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,1) , 3, 0.0 , 0 , 1 );
-        -fx-opacity: 0;
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+    -fx-background-size: 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,1) , 3, 0.0 , 0 , 1 );
+    -fx-opacity: 0;
 }
 
 .background {
