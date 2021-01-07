@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -24,6 +25,7 @@ public class Controller implements Initializable {
     @FXML
     private Button takenCup;
 
+
     @FXML
     public void takeCupFromHandler(ActionEvent event) {
         takenCup.setStyle("-fx-opacity: 1;");
@@ -32,5 +34,10 @@ public class Controller implements Initializable {
     @FXML
     public void pickUpOrder(ActionEvent event) {
             takenCup.setStyle("-fx-opacity: 0;");
+    }
+
+    @FXML
+    public void takeSugar(ActionEvent event){
+        ((Button)event.getSource()).setStyle("-fx-opacity: 0;");
     }
 }

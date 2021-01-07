@@ -23,8 +23,12 @@
                </children>
             </Pane>
             <Button fx:id="takenCup" layoutX="253.0" layoutY="525.0" mnemonicParsing="false" onAction="#pickUpOrder" prefHeight="122.0" prefWidth="95.0" styleClass="cup_standing" />
-            <Button layoutX="466.0" layoutY="594.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Cukier" />
-            <Button layoutX="466.0" layoutY="561.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Cukier" />
+            <Button fx:id="sugar6" layoutX="466.0" layoutY="591.0" mnemonicParsing="false" onAction="#takeSugar" prefHeight="25.0" prefWidth="75.0" text="Cukier" />
+            <Button fx:id="sugar5" layoutX="466.0" layoutY="561.0" mnemonicParsing="false" onAction="#takeSugar" prefHeight="25.0" prefWidth="75.0" text="Cukier" />
+            <Button fx:id="sugar4" layoutX="466.0" layoutY="500.0" mnemonicParsing="false" onAction="#takeSugar" prefHeight="25.0" prefWidth="75.0" text="Cukier" />
+            <Button fx:id="sugar3" layoutX="466.0" layoutY="470.0" mnemonicParsing="false" onAction="#takeSugar" prefHeight="25.0" prefWidth="75.0" text="Cukier" />
+            <Button fx:id="sugar2" layoutX="466.0" layoutY="409.0" mnemonicParsing="false" onAction="#takeSugar" prefHeight="25.0" prefWidth="75.0" text="Cukier" />
+            <Button fx:id="sugar1" layoutX="466.0" layoutY="379.0" mnemonicParsing="false" onAction="#takeSugar" prefHeight="25.0" prefWidth="75.0" text="Cukier" />
          </children></AnchorPane>
    </children>
 </GridPane>
