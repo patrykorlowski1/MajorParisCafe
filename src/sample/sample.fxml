@@ -13,8 +13,8 @@
    <children>
       <AnchorPane prefHeight="1000.0" prefWidth="600.0" stylesheets="@style.css">
          <children>
-            <Button layoutX="56.0" layoutY="408.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="66.0" styleClass="cup_to_take" />
-            <Button layoutX="56.0" layoutY="303.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="66.0" styleClass="cup_to_take" />
+            <Button fx:id="cupToTake2" layoutX="56.0" layoutY="408.0" mnemonicParsing="false" onAction="#takeCupFromHandler" prefHeight="67.0" prefWidth="66.0" styleClass="cup_to_take" />
+            <Button fx:id="cupToTake1" layoutX="56.0" layoutY="303.0" mnemonicParsing="false" onAction="#takeCupFromHandler" prefHeight="67.0" prefWidth="66.0" styleClass="cup_to_take" />
             <Pane layoutX="183.0" layoutY="275.0" prefHeight="167.0" prefWidth="233.0" styleClass="screen" stylesheets="@style.css">
                <children>
                   <ToggleButton layoutX="12.0" layoutY="30.0" mnemonicParsing="false" prefHeight="114.0" prefWidth="108.0" styleClass="cup_on_screen_latte" />
@@ -22,7 +22,7 @@
                   <Button layoutX="101.0" layoutY="141.0" mnemonicParsing="false" text="START" />
                </children>
             </Pane>
-            <Button layoutX="253.0" layoutY="525.0" mnemonicParsing="false" prefHeight="122.0" prefWidth="95.0" styleClass="cup_standing" />
+            <Button fx:id="takenCup" layoutX="253.0" layoutY="525.0" mnemonicParsing="false" onAction="#pickUpOrder" prefHeight="122.0" prefWidth="95.0" styleClass="cup_standing" />
             <Button layoutX="466.0" layoutY="594.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Cukier" />
             <Button layoutX="466.0" layoutY="561.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Cukier" />
          </children></AnchorPane>
