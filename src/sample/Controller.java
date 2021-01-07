@@ -17,7 +17,9 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
-
+    Image cafe1 = new Image(getClass().getResourceAsStream("images/kawa1.png"));
+    Image cafe2 = new Image(getClass().getResourceAsStream("images/kawa2.png"));
+    Image cafe3 = new Image(getClass().getResourceAsStream("images/kawa3.png"));
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -43,12 +45,37 @@ public class Controller implements Initializable {
 
     @FXML
     public void startCafeHandler(ActionEvent event) {
+        cafe.setStyle("-fx-background-image: url('images/kawa1.png');");
         cafe.setStyle("-fx-opacity: 1;");
+
+        new Thread(() ->
+        {
+            try
+            {
+                for(int i=0, n=1; i<100; i++)
+                {
+                    n++;
+                    if(n>3) n=1;
+                    //tu ma sie przelaczac obrazek
+                    //Thread.sleep(1000);
+                    //if(n==1) cafe.setStyle("-fx-background-image: url('images/kawa1.png');");
+                    //else if(n==2) cafe.setStyle("-fx-background-image: url('images/kawa2.png');");
+                    //else if(n==3) cafe.setStyle("-fx-background-image: url('images/kawa3.png');");
+                    //Thread.sleep(5000);
+                }
+                Thread.sleep(5000);
+                cafe.setStyle("-fx-opacity: 0;");
+                Thread.currentThread().interrupt();
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        }).start();
         //for(int i=0, n=1; i<1000000000; i++, n++){
             //if(n>3) n=1;
             //cafe.setStyle("-fx-background-image: url('images/kawa"+ n +".png');");
         //}
-        //cafe.setStyle("-fx-opacity: 0;");
 
     }
 
