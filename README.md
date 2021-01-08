@@ -1,4 +1,4 @@
-"# MajorParisCafe" 
+# MajorParisCafe - Coffee Machine App
 
 How to run?
 
