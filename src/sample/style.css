@@ -110,3 +110,12 @@
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
 }
+
+.help_button {
+    -fx-background-image: url('images/help.png');
+    -fx-background-size: 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,1) , 3, 0.0 , 0 , 1 );
+    -fx-background-radius: 5em;
+}

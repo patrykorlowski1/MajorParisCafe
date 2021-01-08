@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="center" hgap="10" styleClass="background" stylesheets="@style.css" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" styleClass="background" stylesheets="@style.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -30,6 +30,7 @@
             <Button fx:id="sugar3" layoutX="460.0" layoutY="472.0" mnemonicParsing="false" onAction="#takeSugar" prefHeight="34.0" prefWidth="88.0" styleClass="sugar" />
             <Button fx:id="sugar2" layoutX="460.0" layoutY="412.0" mnemonicParsing="false" onAction="#takeSugar" prefHeight="34.0" prefWidth="88.0" styleClass="sugar" />
             <Button fx:id="sugar1" layoutX="460.0" layoutY="379.0" mnemonicParsing="false" onAction="#takeSugar" prefHeight="34.0" prefWidth="88.0" styleClass="sugar" />
+            <Button layoutX="483.0" layoutY="277.0" mnemonicParsing="false" onAction="#refillAccessories" prefHeight="40.0" prefWidth="41.0" styleClass="help_button" />
 
          </children></AnchorPane>
    </children>

@@ -29,6 +29,12 @@ public class Controller implements Initializable {
 
     @FXML
     public Button start;
+    public Button sugar1;
+    public Button sugar2;
+    public Button sugar3;
+    public Button sugar4;
+    public Button sugar5;
+    public Button sugar6;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -53,6 +59,16 @@ public class Controller implements Initializable {
     }
 
     @FXML
+    public void refillAccessories(ActionEvent event){
+        sugar1.setStyle("-fx-opacity: 1;");
+        sugar2.setStyle("-fx-opacity: 1;");
+        sugar3.setStyle("-fx-opacity: 1;");
+        sugar4.setStyle("-fx-opacity: 1;");
+        sugar5.setStyle("-fx-opacity: 1;");
+        sugar6.setStyle("-fx-opacity: 1;");
+    }
+
+    @FXML
     public void startCafeHandler(ActionEvent event) {
         if(late.isSelected() || espresso.isSelected()){
             cafe.setStyle("-fx-background-image: url('images/kawa1.png');");
@@ -61,25 +77,10 @@ public class Controller implements Initializable {
             if(late.isSelected()) start.setText("Caffe latte");
             if(espresso.isSelected()) start.setText("Espresso");
 
-            /*String path = "images/cafe_audio.mp3";
-            Media cafeAudio = new Media("file:///images/cafe_audio.mp3");
+            Media cafeAudio = new Media(this.getClass().getResource("images/cafe_audio.mp3").toString());
             MediaPlayer cafeAudioPlayer = new MediaPlayer(cafeAudio);
+            cafeAudioPlayer.play();
 
-
-            new Thread(() ->
-            {
-                try
-                {
-                    while(true)
-                    {
-                        cafeAudioPlayer.play();
-                    }
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
-            }).start();*/
             new Thread(() ->
             {
                 try
