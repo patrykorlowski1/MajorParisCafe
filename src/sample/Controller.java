@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 import javafx.event.ActionEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.media.AudioClip;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import java.net.URL;
@@ -68,17 +69,13 @@ public class Controller implements Initializable {
     public void startCafeHandler(ActionEvent event) {
         if(late.isSelected() || espresso.isSelected()){
 
-            Media cafeAudio = new Media(this.getClass().getResource("images/cafe_audio.mp3").toString());
-            MediaPlayer cafeAudioPlayer = new MediaPlayer(cafeAudio);
+            AudioClip cafeAudio = new AudioClip(this.getClass().getResource("images/cafe_audio.mp3").toString());
 
             new Thread(() ->
             {
                 try
                 {
-                    while(true){
-                        cafeAudioPlayer.play();
-                    }
-
+                        cafeAudio.play();
                 }
                 catch (Exception e)
                 {
