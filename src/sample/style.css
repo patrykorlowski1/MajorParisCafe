@@ -105,6 +105,30 @@
     -fx-opacity: 0;
 }
 
+.cafe2{
+    -fx-background-image: url('images/kawa2.png');
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+    -fx-background-size: 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,1) , 3, 0.0 , 0 , 1 );
+    -fx-opacity: 0;
+}
+
+.cafe3{
+    -fx-background-image: url('images/kawa3.png');
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+    -fx-background-size: 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,1) , 3, 0.0 , 0 , 1 );
+    -fx-opacity: 0;
+}
+
 .background {
     -fx-background-image: url('images/background.png');
     -fx-background-position: center;

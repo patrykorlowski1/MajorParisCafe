@@ -23,6 +23,8 @@
                </children>
             </Pane>
             <Pane fx:id="cafe" layoutX="264.0" layoutY="491.0" pickOnBounds="true" prefHeight="145.0" prefWidth="95.0" styleClass="cafe" />
+            <Pane fx:id="cafe2" layoutX="264.0" layoutY="491.0" pickOnBounds="true" prefHeight="145.0" prefWidth="95.0" styleClass="cafe2" />
+            <Pane fx:id="cafe3" layoutX="264.0" layoutY="491.0" pickOnBounds="true" prefHeight="145.0" prefWidth="95.0" styleClass="cafe3" />
             <Button fx:id="takenCup" layoutX="252.0" layoutY="521.0" mnemonicParsing="false" onAction="#pickUpOrder" prefHeight="114.0" prefWidth="95.0" styleClass="cup_standing" />
             <Button fx:id="sugar6" layoutX="460.0" layoutY="594.0" mnemonicParsing="false" onAction="#takeSugar" prefHeight="34.0" prefWidth="88.0" styleClass="sugar" />
             <Button fx:id="sugar5" layoutX="460.0" layoutY="560.0" mnemonicParsing="false" onAction="#takeSugar" prefHeight="34.0" prefWidth="88.0" styleClass="sugar" />
